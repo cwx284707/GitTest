@@ -1,6 +1,4 @@
-chenchao 20190517
-mali 
-chenmuxi
+ 20190517
 
 git is version control system.
 git is free software.
