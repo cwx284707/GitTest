@@ -8,3 +8,14 @@ git diff --> 查看文件的修改内容
 git log [--pretty=oneline]--> 查看提交历史
 git reset --hard commit_id --> 回退/前进版本
 git reflog --> 查看命令历史
+
+
+工              暂                      版
+作  git add     存      git commit      本
+区              区                      库
+
+git checkout -- <file>      放弃文件的本地修改
+git reset HEAD <file>       放弃暂存区的修改
+
+mac删除文件命令 rm <file>
+
