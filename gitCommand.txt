@@ -54,3 +54,5 @@ git stash list          -- 查看存储的工作区
 git stash apply         -- 恢复工作区，但是stash内容并不删除
 git stash drop          -- 删除存储的工作区
 git stash pop           -- 恢复工作区，并且删除存储的stash内容
+
+git branch -D xxx       -- 强行删除一个没有做过合并的分支
