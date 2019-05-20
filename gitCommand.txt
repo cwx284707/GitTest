@@ -1,4 +1,5 @@
 mac查看当前目录路径 pwd
+mac删除文件命令 rm <file>
 
 git init --> 把当前目录设置成Git可以管理的仓库
 git add 文件名 --> 把指定文件放到Git仓库
@@ -9,7 +10,6 @@ git log [--pretty=oneline]--> 查看提交历史
 git reset --hard commit_id --> 回退/前进版本
 git reflog --> 查看命令历史
 
-
 工              暂                      版
 作  git add     存      git commit      本
 区              区                      库
@@ -17,11 +17,10 @@ git reflog --> 查看命令历史
 git checkout -- <file>      放弃文件的本地修改
 git reset HEAD <file>       放弃暂存区的修改
 
-mac删除文件命令 rm <file>
-
 git remote add origin https://github.com/cwx284707/GitTest.git
 
-git push -u origin master
+git remote add origin <url>     -- 关联一个远程库
+git push -u origin master       -- 第一次推送master分支的所有内容
 
 git clone git@github.com:cwx284707/gitskills.git //推荐使用这种方式 使用ssh协议
 
@@ -51,9 +50,10 @@ git log --graph         -- 查看分支合并图
 git stash               -- 保存工作区
 git stash list          -- 查看存储的工作区
 
-git stash apply         -- 恢复工作区，但是stash内容并不删除
-git stash drop          -- 删除存储的工作区
-git stash pop           -- 恢复工作区，并且删除存储的stash内容
+git stash pop           -- 恢复工作区，并且删除存储的stash内容 // 推荐
+
+git stash apply stash@{0}        -- 恢复工作区，但是stash内容并不删除
+git stash drop stash@{0}         -- 删除存储的工作区
 
 git branch -D xxx       -- 强行删除一个没有做过合并的分支
 
@@ -87,7 +87,7 @@ git push origin --tags                      -- 推送所有标签到远程
 
 在GitHub上，可以任意Fork开源仓库；自己拥有Fork后的仓库的读写权限；可以推送pull request给官方仓库来贡献代码。
 
-忽略文件，在库根目录下添加.gitignore文件，在文件中添加忽略的文件即可。
+配置忽略文件，在库根目录下添加.gitignore文件，在文件中添加忽略的文件即可。
 .gitignore
 
 学习地址：https://www.liaoxuefeng.com/wiki/896043488029600
